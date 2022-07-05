@@ -1,0 +1,25 @@
+.anime-post{
+    background-color: rgb(43, 43, 43);
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    height: auto;
+}
+.anime-post h1{
+    text-align: center;
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 720px) {
+    .anime-post{
+      margin-top: 100px;
+  }
+}  
+.foto-anime{
+    height: 400px;
+    width: 400px;
+}
+.episodios{
+    background-color: rgb(26, 26, 26);
+}

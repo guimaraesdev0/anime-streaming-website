@@ -1,0 +1,68 @@
+.login-container{
+    /* login-container */
+
+margin-top: 100px;
+width: 786px;
+height: 394px;
+
+background: #d9d9d9;
+border-radius: 23px;
+}
+.logo{
+  /* icon */
+  position: absolute;
+  width: 127px;
+  height: 112px;
+  left: 46%;
+  top: 92px;
+
+background: url(../imgs/icon.png);
+background-size: cover;
+  
+}
+.formulario{
+    margin-top: 12%;
+    margin-left: 5%;
+}
+.formulario input[type="text"]{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+    height: 45px;
+    border: 0px;
+    border-radius: 17px;
+    -webkit-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29); 
+   box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29);
+}
+.formulario input[type="email"]{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+    height: 45px;
+    border: 0px;
+    border-radius: 17px;
+    -webkit-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29); 
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29);
+}
+.formulario input[type="password"]{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 700px;
+    height: 45px;
+    border: 0px;
+    border-radius: 17px;
+    -webkit-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29); 
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29);
+}
+.formulario input[type="submit"]{
+    border: 0px;
+    margin-left: 20%;
+    width: 250px;
+    -webkit-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29); 
+    box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.29);
+}
+.termos{
+    padding-left: 5px;
+    padding-bottom: 5px;
+    color: #919191;   
+}

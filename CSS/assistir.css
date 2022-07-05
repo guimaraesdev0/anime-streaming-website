@@ -1,0 +1,23 @@
+.assistir{
+    background-color: rgb(43, 43, 43);
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    height: auto;
+}
+.assistir h1, h3{
+    text-align: center;
+    
+}
+.assistir iframe{
+    width: 1500px;
+    height: 500px;
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 720px) {
+    .assistir{
+      margin-top: 100px;
+  }
+}  

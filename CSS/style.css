@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+body{
+    background: rgb(0, 0, 0);
+    background-image: url(../imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+.bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
+  }
+  video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+  }
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: 4;
+  }
+   .index h1 {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    max-width: 700px;
+    width: 100%;
+    height: 150px;
+  } 
+.logo-index{
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+}
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 30, 255, 0.315);
+    background: linear-gradient(164deg, rgba(0, 30, 255, 0.425) 0%, rgba(162, 0, 255, 0.404) 65%);
+    overflow: hidden;
+    z-index: 0;
+}
+.background li {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #4c00ff;
+    color: transparent;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 7s ease-in forwards infinite;
+}
+undefined
+.background li:nth-child(0) {
+    animation-delay: 0s;
+    left: 86vw;
+    top: 47vh;
+    border-color: #a200ff;
+}
+
+.background li:nth-child(1) {
+    animation-delay: 2s;
+    left: 40vw;
+    top: 57vh;
+    border-color: #0400ff;
+}
+
+.background li:nth-child(2) {
+    animation-delay: 4s;
+    left: 2vw;
+    top: 68vh;
+    border-color: #0046d4;
+}
+
+.background li:nth-child(3) {
+    animation-delay: 6s;
+    left: 73vw;
+    top: 25vh;
+    border-color: #0046d4;
+}
+
+.background li:nth-child(4) {
+    animation-delay: 8s;
+    left: 22vw;
+    top: 97vh;
+    border-color: #0046d4;
+}
+
+.background li:nth-child(5) {
+    animation-delay: 10s;
+    left: 65vw;
+    top: 7vh;
+}
+.erro-registro{
+    color: red;
+    background-color: rgb(255, 215, 215);
+}
+.certo{
+    color: rgb(0, 255, 0);
+    background-color: rgb(215, 255, 215);
+}
+.vermelho{
+    color: red;
+}
+.footer{
+    border-top: 1px solid #2e2e2e;
+    color: white;
+    margin-top: 50px;
+    background-color: rgb(46, 46, 46);
+    height: auto;
+    position: fixed;
+    bottom: 0px;
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 720px) {
+  .footer{
+      display: block;
+  }
+}  
+@media only screen and (max-width: 653px) {
+    .index h1 {
+        text-align: center;
+        color: #fff;
+        position: fixed;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 100%;
+        z-index: 3;
+        max-width: 700px;
+        width: 100%;
+        height: 150px;
+      } 
+}  
+.footer-catalogo{
+    border-top: 1px solid #2e2e2e;
+    color: white;
+    margin-top: 50px;
+    background-color: rgb(46, 46, 46);
+    height: auto;
+    bottom: 0px;
+}
+.footer p{
+    text-align: center;
+}
+.discord-icon{
+    height: 60px;
+    width: 65px;
+}

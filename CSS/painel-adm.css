@@ -1,0 +1,37 @@
+.painel-adm{
+    background-color: #282828;
+    border-radius: 5px;
+    color: white;
+    margin-top: 1%;
+}
+.config input[type="text"]{
+    width: 1000px;
+}
+.painel-adm h1{
+    text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+    .config input[type="text"]{
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .config input[type="text"]{
+        width: 500px;
+    }
+  .painel-adm{
+      margin-top: 100px;
+  }
+}  
+.painel-adm-icon{
+    height: 150px;
+}
+.usuario{
+    margin-top: 10px;
+}
+.postar-admin{
+    margin-top: 20px;
+}
+.descricao-temp{
+    width: 550px;
+}

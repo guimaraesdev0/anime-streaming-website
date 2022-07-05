@@ -1,0 +1,32 @@
+.perfil{
+    background-color: rgb(43, 43, 43);
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: white;
+}
+.perfil h1{
+    text-align: center;
+}
+.perfil{
+    margin-top: 12%;
+    margin-left: 5%;
+}
+.icon-perfil{
+    width: 150px;
+    border: 2px solid rgb(21, 255, 0);
+}
+.info-user{
+    text-align: center;
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 720px) {
+  .perfil{
+      margin-top: 100px;
+  }
+}  
+.form-edicao input[type="text"]{
+    width: 250px;
+}
