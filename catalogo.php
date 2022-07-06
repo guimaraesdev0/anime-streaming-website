@@ -137,7 +137,7 @@ if ($_SESSION['nome_logado'] == "") {
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 footer-catalogo">
+            <div class="col-12 footer">
                 <p>Nome seu site | Foi criado de 💖 por <a href="https://github.com/GuimaSpace">Guimaraes</a> | 2022</p>
             </div>
         </div>

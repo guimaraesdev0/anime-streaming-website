@@ -68,11 +68,11 @@ if ($_SESSION['nome_logado'] == "") {
         </div>
     </div>
 
-    <div class="container perfil">
+    <div class="container-fluid perfil">
         <div class="row">
-            <div class="col-xl-2 col-sm-12">
+            <div class="col-xl-2 col-sm-12 margin-top-perfil">
             <div class="d-flex justify-content-center">
-            <img src="imgs/no_icon.jpg" alt="" class="rounded-circle icon-perfil">
+            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="rounded-circle icon-perfil" style="border: 5px solid <?php echo($row_usuariov['cor_aura']); ?>">
             </div>
             <div class="d-flex justify-content-center">
             <?php
@@ -87,7 +87,7 @@ if ($_SESSION['nome_logado'] == "") {
             </div>
 
             </div>
-            <div class="col-xl-6 col-sm-12">
+            <div class="col-xl-10 col-sm-12 margin-top-perfil">
                 Id: <?php echo ($row_usuariov['id']) ?><br>
                 Nome: <?php echo ($row_usuariov['nome']) ?><br>
                 Descricao:"<?php echo ($row_usuariov['descricao']) ?>"<br>  

@@ -72,10 +72,11 @@ if ($_SESSION['nome_logado'] == "") {
         <div class="row">
             <div class="col-xl-2 col-md-6 col-sm-12">
             <div class="d-flex justify-content-center">
-            <img src="imgs/no_icon.jpg" alt="" class="rounded-circle icon-perfil">
+            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="icon-perfil">
+            <!--<img src="<?php echo($row_usuariov['img']); ?>" alt="" class="rounded-circle icon-perfil" style="border: 5px solid <?php echo($row_usuariov['cor_aura']); ?>">!-->
             </div>
             <div class="d-flex justify-content-center">
-            <?php
+            <?php    
             if ($row_usuariov['staff'] == "1") {
                 echo "
                 <img src='imgs/staff-icon.png' height='25' width='150'>
@@ -113,10 +114,27 @@ if ($_SESSION['nome_logado'] == "") {
                                     unset($_SESSION['certo']);
                                 }
                             ?>
-                    Id:<input type="text" name="id" value="<?php echo ($row_usuariov['id']); ?>" disabled="true"><br>
-                    Nome:<input type="text" name="nome" value="<?php echo ($row_usuariov['nome']); ?>"><br>
-                    Email:<input type="text" name="email" value="<?php echo ($row_usuariov['email']); ?>"><br>
-                    Descricao:<input type="text" name="descricao" value="<?php echo ($row_usuariov['descricao']); ?>"><br>
+                    <div class="input-group mb-3">        
+                    Id:<input type="text" class="form-control" name="id" value="<?php echo ($row_usuariov['id']); ?>" disabled="true"><br>
+
+                    Nome:<input type="text" class="form-control" name="nome" value="<?php echo ($row_usuariov['nome']); ?>"><br>
+                    Email:<input type="text" class="form-control" name="email" value="<?php echo ($row_usuariov['email']); ?>"><br>
+                    Descricao:<input type="text" class="form-control" name="descricao" value="<?php echo ($row_usuariov['descricao']); ?>"><br>
+                    Link foto perfil:<input type="text" class="form-control" name="img" value="<?php echo ($row_usuariov['img']); ?>"><br>
+                    <?php
+                    if ($row_usuariov['vip'] == 1) {
+                       echo "
+                       Cor da aura:<input type='color' name='cor-aura' value=" . $row_usuariov['cor_aura'] ."><br>
+                       ";
+                    }else {
+                        echo "
+
+                        <p class='vermelho'>Cor da aura *Somente Vip:<input type='color' name='cor-aura' disabled='true' value=" . $row_usuariov['cor_aura'] ."><br>
+                        </p>";
+                    }
+                    ?>
+                </div>
+
                     <button type="submit" class="btn btn-success">Confirmar edição</button>
                 </form>
                 <button type="submit" class="btn btn-danger">Mudar senha</button>

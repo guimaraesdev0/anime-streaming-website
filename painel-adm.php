@@ -97,7 +97,6 @@ if ($_SESSION['nome_logado'] == "") {
                                 <div class="container-fluid envio envios">
                                    <h1>Usuarios</h1>
                                     <div class="row">
-                                        
                                     <?php
                                     $result_usuarios = "SELECT * FROM usuarios";
                                     $resultado_usuarios = mysqli_query($conn, $result_usuarios);
@@ -105,7 +104,7 @@ if ($_SESSION['nome_logado'] == "") {
                                     echo "
                                     <div class='col-xl-6 col-md-6 col-sm-6 usuario'>
                                       <div class='d-flex justify-content-center'>
-                                      <img src='imgs/user-icon.png' class='painel-adm-icon rounded-circle'><br>"
+                                      <img src='" . $row_usuario['img'] . "' class='painel-adm-icon rounded-circle' style='border: 3px solid " . $row_usuario['cor_aura'] . "'><br>"
                                       . "id " . $row_usuario['id'] . "<br>" . "nome: " . $row_usuario['nome']  . "<br>" . "<br>" . "<a href=''>Editar conta</a>" . "</div> </div>";
                                     }
                                     ?>

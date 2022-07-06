@@ -76,13 +76,13 @@ if ($_SESSION['nome_logado'] == "") {
         <div class="row">
             <div class="col-xl-2 col-sm-12">
             <div class="d-flex justify-content-center">
-            <img src="imgs/no_icon.jpg" alt="" class="rounded-circle icon-perfil">
+            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="rounded-circle icon-perfil" style="border: 5px solid <?php echo($row_usuariov['cor_aura']); ?>">
             </div>
             <div class="d-flex justify-content-center">
             <?php
             if ($row_usuariov['staff'] == "1") {
                 echo "
-                <img src='imgs/staff-icon.png' height='25' width='150'>
+                <img src='imgs/staff-icon.png' height='25' width='150' >
                 ";
             }else {
                 

@@ -7,6 +7,8 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $descricao = "Eu amo " . $nome_site;
 $senhabase = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 $senha = md5($senhabase);
+$cor_padrao = "#15ff00";
+$icon_padrao = "https://cdn-icons-png.flaticon.com/512/634/634741.png";
 
 $auth1 = rand(1,999);
 $auth2 = rand(1,999);
@@ -28,7 +30,7 @@ if ($nome == "" || $senhabase == "") {
         $_SESSION['erro']="O nome cadastrado já existe";
         header("Location: registro.php");
     }else {
-         $result_usuario = "INSERT INTO usuarios (nome, email, senha, descricao, auth, created) VALUE('$nome', '$email', '$senha', '$descricao', '$auth', NOW())";
+         $result_usuario = "INSERT INTO usuarios (nome, email, senha, descricao, auth, img, cor_aura, created) VALUE('$nome', '$email', '$senha', '$descricao', '$auth', '$icon_padrao', '$cor_padrao', NOW())";
         $resultado_usuario = mysqli_query($conn, $result_usuario);
         setcookie("auth", $auth);
         $_SESSION["auth"]=$auth;
