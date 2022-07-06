@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jul-2022 às 01:31
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 7.4.29
+-- Tempo de geração: 06-Jul-2022 às 23:31
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,8 +61,7 @@ CREATE TABLE `episodios` (
 --
 
 INSERT INTO `episodios` (`id_anime`, `episodio`, `link_embed`, `postado`) VALUES
-('3', '1', 'https://drive.google.com/file/d/1I3HOyzouUFnJkdX1jAnchCoMZEM7YBlKVQ/preview', 'Vinicius'),
-('5', '1', 'http://repo.guimaraes.ml/uploads/bg.mp4', 'Vinicius');
+('7', '1', 'https://www.cartacapital.com.br/wp-content/uploads/2019/12/arassari.jpg', 'Vinicius');
 
 -- --------------------------------------------------------
 
@@ -84,8 +83,8 @@ CREATE TABLE `temporadas` (
 --
 
 INSERT INTO `temporadas` (`id`, `titulo`, `descricao`, `temporada`, `link`, `ano`) VALUES
-(3, 'Bolsonaro Chan', 'Acompanhe essa trama do protagonista jair bolsonaro contra seu rival nas urnas brasileiras em 2022', '1', 'http://pm1.narvii.com/7807/064e9d2d79e0a724f982e2169612c289ac5ad585r1-565-543v2_uhq.jpg', '2022'),
-(5, 'Guimaraes Dev', ' PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP  PHP ', '1', 'https://static.imasters.com.br/wp-content/uploads/2018/06/22153245/php-post-1.png', '2006');
+(6, 'Teste PHP', 'Isso é um teste pfvr n repare pfvr sério pfvr', '1', 'https://devtechnosys.com/insights/wp-content/uploads/2022/03/What-is-PHP.gif', '2022'),
+(7, 'Php 2', 'PHP PHP PHP', '2', 'https://i.stack.imgur.com/VtaCs.gif', '2022');
 
 -- --------------------------------------------------------
 
@@ -104,15 +103,18 @@ CREATE TABLE `usuarios` (
   `expiravip` date DEFAULT NULL,
   `staff` varchar(220) DEFAULT NULL,
   `auth` varchar(220) NOT NULL,
-  `vip` varchar(220) DEFAULT NULL
+  `vip` varchar(220) DEFAULT NULL,
+  `img` varchar(520) DEFAULT NULL,
+  `cor_aura` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `descricao`, `created`, `modified`, `expiravip`, `staff`, `auth`, `vip`) VALUES
-(13, 'Vinicius', '', '91656bc4b7d4a2a3029ecb4d952982e7', 'Site', '2022-07-03', '2022-07-05', '2005-07-05', '1', '800196267946955', '1');
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `descricao`, `created`, `modified`, `expiravip`, `staff`, `auth`, `vip`, `img`, `cor_aura`) VALUES
+(13, 'Vinicius', '', '91656bc4b7d4a2a3029ecb4d952982e7', 'Site', '2022-07-03', '2022-07-06', '2005-07-05', '1', '800196267946955', '1', 'https://c.tenor.com/OqxNHzXPoVwAAAAC/bingus.gif', '#00b3ff'),
+(17, 'Mauricio', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', '2022-07-06', NULL, NULL, '930524818599437', NULL, 'https://cdn-icons-png.flaticon.com/512/634/634741.png', '');
 
 --
 -- Índices para tabelas despejadas
@@ -138,13 +140,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `temporadas`
 --
 ALTER TABLE `temporadas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
