@@ -70,10 +70,9 @@ if ($_SESSION['nome_logado'] == "") {
 
     <div class="container perfil">
         <div class="row">
-            <div class="col-xl-2 col-md-6 col-sm-12">
+            <div class="col-xl-12 col-md-12 col-sm-12">
             <div class="d-flex justify-content-center">
-            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="icon-perfil">
-            <!--<img src="<?php echo($row_usuariov['img']); ?>" alt="" class="rounded-circle icon-perfil" style="border: 5px solid <?php echo($row_usuariov['cor_aura']); ?>">!-->
+            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="icon-perfil" style="border-image: linear-gradient(to right, <?php echo($row_usuariov['cor_aura']); ?>, <?php echo($row_usuariov['cor_aura2']); ?>) 1;?>">
             </div>
             <div class="d-flex justify-content-center">
             <?php    
@@ -88,7 +87,8 @@ if ($_SESSION['nome_logado'] == "") {
             </div>
 
             </div>
-            <div class="col-xl-6 col-md-6 col-sm-6 form-edicao">
+            <div class="col-xl-12 col-md-12 col-sm-12 form-edicao">
+            <div class="d-flex justify-content-center">
                 <form action="proc_edit_usuario.php" method="POST">
                 <?php
                                 if (isset($_SESSION['erro'])) {
@@ -114,7 +114,7 @@ if ($_SESSION['nome_logado'] == "") {
                                     unset($_SESSION['certo']);
                                 }
                             ?>
-                    <div class="input-group mb-3">        
+      
                     Id:<input type="text" class="form-control" name="id" value="<?php echo ($row_usuariov['id']); ?>" disabled="true"><br>
 
                     Nome:<input type="text" class="form-control" name="nome" value="<?php echo ($row_usuariov['nome']); ?>"><br>
@@ -126,16 +126,24 @@ if ($_SESSION['nome_logado'] == "") {
                        echo "
                        Cor da aura:<input type='color' name='cor-aura' value=" . $row_usuariov['cor_aura'] ."><br>
                        ";
+                       echo "
+                       Cor da aura 2:<input type='color' name='cor-aura2' value=" . $row_usuariov['cor_aura2'] ."><br>
+                       ";
                     }else {
                         echo "
 
-                        <p class='vermelho'>Cor da aura *Somente Vip:<input type='color' name='cor-aura' disabled='true' value=" . $row_usuariov['cor_aura'] ."><br>
+                        <p class='vermelho'>Cor da aura *Somente Vip:<input type='color' name='cor-aura' disabled='true' value='" . $row_usuariov['cor_aura'] ."'><br>
+                        </p>";
+                        echo "
+
+                        <p class='vermelho'>Cor da aura 2 *Somente Vip:<input type='color' name='cor-aura' disabled='true' value='" . $row_usuariov['cor_aura2'] ."'><br>
                         </p>";
                     }
                     ?>
-                </div>
+
 
                     <button type="submit" class="btn btn-success">Confirmar edição</button>
+                </div>
                 </form>
                 <button type="submit" class="btn btn-danger">Mudar senha</button>
             </div>

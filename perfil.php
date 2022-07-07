@@ -72,7 +72,7 @@ if ($_SESSION['nome_logado'] == "") {
         <div class="row">
             <div class="col-xl-2 col-sm-12 margin-top-perfil">
             <div class="d-flex justify-content-center">
-            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="rounded-circle icon-perfil" style="border: 5px solid <?php echo($row_usuariov['cor_aura']); ?>">
+            <img src="<?php echo($row_usuariov['img']); ?>" alt="" class="icon-perfil" style="border-image: linear-gradient(to right, <?php echo($row_usuariov['cor_aura']); ?>, <?php echo($row_usuariov['cor_aura2']); ?>) 1;?>">
             </div>
             <div class="d-flex justify-content-center">
             <?php

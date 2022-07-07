@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Jul-2022 às 23:31
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 07-Jul-2022 às 05:15
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -105,16 +105,20 @@ CREATE TABLE `usuarios` (
   `auth` varchar(220) NOT NULL,
   `vip` varchar(220) DEFAULT NULL,
   `img` varchar(520) DEFAULT NULL,
-  `cor_aura` varchar(50) DEFAULT NULL
+  `cor_aura` varchar(50) DEFAULT NULL,
+  `cor_aura2` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `descricao`, `created`, `modified`, `expiravip`, `staff`, `auth`, `vip`, `img`, `cor_aura`) VALUES
-(13, 'Vinicius', '', '91656bc4b7d4a2a3029ecb4d952982e7', 'Site', '2022-07-03', '2022-07-06', '2005-07-05', '1', '800196267946955', '1', 'https://c.tenor.com/OqxNHzXPoVwAAAAC/bingus.gif', '#00b3ff'),
-(17, 'Mauricio', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', '2022-07-06', NULL, NULL, '930524818599437', NULL, 'https://cdn-icons-png.flaticon.com/512/634/634741.png', '');
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `descricao`, `created`, `modified`, `expiravip`, `staff`, `auth`, `vip`, `img`, `cor_aura`, `cor_aura2`) VALUES
+(13, 'Vinicius', '', '91656bc4b7d4a2a3029ecb4d952982e7', 'Site', '2022-07-03', '2022-07-06', '2005-07-05', '1', '800196267946955', '1', 'https://c.tenor.com/OqxNHzXPoVwAAAAC/bingus.gif', '#e100ff', '#00ffe1'),
+(17, 'Mauricio', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', '2022-07-06', NULL, NULL, '930524818599437', NULL, 'https://cdn-icons-png.flaticon.com/512/634/634741.png', '', NULL),
+(18, 'Guimaraes', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', NULL, NULL, NULL, '63539416593404', NULL, 'https://cdn-icons-png.flaticon.com/512/634/634741.png', '#15ff00', NULL),
+(19, 'Jair Bolsonaro', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', '2022-07-06', NULL, '0', '21515149214193', '1', 'https://i.redd.it/vley6wjk5oz61.png', '#15ff00', '#15ff00'),
+(20, '123', '', '202cb962ac59075b964b07152d234b70', 'Eu amo Nome do seu site', '2022-07-06', '2022-07-06', NULL, NULL, '271622148349427', NULL, 'https://cdn-icons-png.flaticon.com/512/634/634741.png', '', '');
 
 --
 -- Índices para tabelas despejadas
@@ -146,7 +150,7 @@ ALTER TABLE `temporadas`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

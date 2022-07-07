@@ -16,6 +16,7 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 $img = filter_input(INPUT_POST, 'img', FILTER_SANITIZE_STRING);
 $cor_aura = $_POST['cor-aura'];
+$cor_aura2 = $_POST['cor-aura2'];
 
 
     if ($nome == "") {
@@ -32,12 +33,12 @@ $cor_aura = $_POST['cor-aura'];
 
         $_SESSION['erro']="Já existe um usuario com este nome.";
         $_SESSION['certo']="Apenas a descricao foi modificado";
-        $result_usuario = "UPDATE usuarios SET descricao='$descricao', img='$img', cor_aura='$cor_aura', modified=NOW() WHERE auth='$auth'";
+        $result_usuario = "UPDATE usuarios SET descricao='$descricao', img='$img', cor_aura='$cor_aura', cor_aura2='$cor_aura2', modified=NOW() WHERE auth='$auth'";
         $resultado_usuario = mysqli_query($conn, $result_usuario);
         header("Location: editar.php"); 
     }else {
         
-        $result_usuario = "UPDATE usuarios SET email='$email', nome='$nome', descricao='$descricao', img='$img', cor_aura='$cor_aura', modified=NOW() WHERE auth='$auth'";
+        $result_usuario = "UPDATE usuarios SET email='$email', nome='$nome', descricao='$descricao', img='$img', cor_aura='$cor_aura', cor_aura2='$cor_aura2', modified=NOW() WHERE auth='$auth'";
         $resultado_usuario = mysqli_query($conn, $result_usuario);
         $_SESSION['certo']="Voce editou com sucesso.";
         header("Location: editar.php"); 
