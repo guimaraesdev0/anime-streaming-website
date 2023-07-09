@@ -1,4 +1,4 @@
-# Obs: Fiz esse site depois de 2 dias aprendendo PHP.
+### Obs: Fiz esse site depois de 2 dias aprendendo PHP.
 Site de streaming de animes feito em PHP e Bootstrap
 
 Atenção!  
